@@ -10,7 +10,6 @@ namespace SnakeLadderSimulator
 
             GameSimulator simulator = new GameSimulator();
             Console.WriteLine("");
-            simulator.OptionCheck();
             simulator.GameLogic();
             Console.ReadKey();
         }

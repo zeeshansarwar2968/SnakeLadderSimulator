@@ -38,36 +38,72 @@ namespace SnakeLadderSimulator
 
         }
 
-
         // Function to create the logic of the game
         public void GameLogic()
         {
-            // Using random method to generate a random number between 1 and 6
-            int dieRoll = generateNum.Next(1, 7);
             Console.WriteLine("The Starting Position of the Player is {0}", position);
-            Console.WriteLine("The value of the die roll is {0}", dieRoll);
-            //Console.WriteLine("The option selected : {0}", optionValue);
+
+            //While loop to run through the iterations till the postion of 100 is reached
+            
+            while(position<100)
+            {
+                // Using random method to generate a random number between 1 and 6
+                int dieRoll = generateNum.Next(1, 7);
+                Console.WriteLine("The rolled die value is: {0}",dieRoll);
+
+                // Using random method to generate a random number between 1 and 4
+                int options = generateNum.Next(1, 4);
+                switch (options)
+                {
+                    case 1:
+                        optionValue = "No Play";
+                        break;
+                    case 2:
+                        optionValue = "Ladder";
+                        break;
+                    case 3:
+                        optionValue = "Snake";
+                        break;
+                    default:
+                        break;
+                }
+
+                Console.WriteLine("The rolled option is: "+optionValue);
+
+                if (position >= 0)
+                {
+                    if (optionValue == "No Play")
+                    {
+                        continue;
+                    }
+                    else if (optionValue == "Ladder")
+                    {
+                        position = position + dieRoll;
+                    }
+                    else
+                    {
+                        position = position - dieRoll;
+                    }
+
+                }else if(position < 0)
+                {
+                    Console.WriteLine("Not Valid, revert position to 0");
+                    position = 0;
+                    continue;
+                }
+                Console.Write("The running Position is : ");
+                Console.WriteLine(position);
+                Console.WriteLine("");
+
+
+            }
+
             Console.WriteLine("");
-
-            //Conditional statment to increase position of player on option check
-            if(optionValue == "No Play")
-            {
-                Console.WriteLine("No Play Option rolled. Skip this turn");
-            }else if (optionValue == "Ladder")
-            {
-                Console.WriteLine("Ladder Option rolled. Move Forward");
-                position = position + dieRoll;
-                Console.WriteLine("New position is {0}", position);
-            }
-            else
-            {
-                Console.WriteLine("Snake Option rolled. Move Backwards");
-                position = position - dieRoll;
-                Console.WriteLine("New position is {0}", position);
-            }
-
-
+            //Console.WriteLine("Final position is {0}", position);
+            Console.WriteLine("");
+            Console.WriteLine("The player has reached the winning position of 100");
         }
+
 
     }
 }
