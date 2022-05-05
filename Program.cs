@@ -7,6 +7,10 @@ namespace SnakeLadderSimulator
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Snake & Ladder Game Simulator");
+
+            GameSimulator simulator = new GameSimulator();
+            Console.WriteLine("");
+            simulator.GameLogic();
             Console.ReadKey();
         }
     }
