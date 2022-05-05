@@ -49,7 +49,7 @@ namespace SnakeLadderSimulator
             //Console.WriteLine("The option selected : {0}", optionValue);
             Console.WriteLine("");
 
-            //Conditional statment of 
+            //Conditional statment to increase position of player on option check
             if(optionValue == "No Play")
             {
                 Console.WriteLine("No Play Option rolled. Skip this turn");
