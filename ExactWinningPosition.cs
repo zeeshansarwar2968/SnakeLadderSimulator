@@ -82,8 +82,10 @@ namespace SnakeLadderSimulator
                 Console.WriteLine("");
 
             }
-
+            Console.WriteLine("-----------------------------------------------------------");
+            Console.WriteLine("");
             Console.WriteLine("Final Position of the Player on the board is : " + position);
+            Console.WriteLine("The count of dice rolls for the player to reach the winning position is : "+diceCounter);
         }
 
 
