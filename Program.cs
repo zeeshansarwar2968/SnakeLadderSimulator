@@ -9,8 +9,11 @@ namespace SnakeLadderSimulator
             Console.WriteLine("Welcome to Snake & Ladder Game Simulator");
 
             GameSimulator simulator = new GameSimulator();
+
+            ExactWinningPosition exactWinningPosition = new ExactWinningPosition(); 
             Console.WriteLine("");
-            simulator.GameLogic();
+            //simulator.GameLogic();
+            exactWinningPosition.GameLogic();
             Console.ReadKey();
         }
     }

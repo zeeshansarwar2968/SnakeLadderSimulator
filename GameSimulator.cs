@@ -11,7 +11,7 @@ namespace SnakeLadderSimulator
         //Initialising a variable to hold the value of position of player on the board
         int position = 0;
 
-        string optionValue;
+        string optionValue="";
         //Initialising Random to for future application
         Random generateNum = new Random();
         
@@ -87,7 +87,7 @@ namespace SnakeLadderSimulator
 
                 }else if(position < 0)
                 {
-                    Console.WriteLine("Not Valid, revert position to 0");
+                    //Console.WriteLine("Not Valid, revert position to 0");
                     position = 0;
                     continue;
                 }
@@ -101,7 +101,7 @@ namespace SnakeLadderSimulator
             Console.WriteLine("");
             //Console.WriteLine("Final position is {0}", position);
             Console.WriteLine("");
-            Console.WriteLine("The player has reached the winning position of 100");
+            Console.WriteLine("The player has reached the winning position");
         }
 
 
