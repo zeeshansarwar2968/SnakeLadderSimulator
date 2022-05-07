@@ -22,7 +22,7 @@ namespace SnakeLadderSimulator
         {
             Console.WriteLine("The Starting Position of the Player is {0}", position);
 
-            //While loop to run through the iterations till the postion of 100 is reached
+            //While loop to run through the iterations till the winning position of 100 is reached
 
             while(position < 100)
             {

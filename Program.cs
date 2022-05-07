@@ -11,9 +11,13 @@ namespace SnakeLadderSimulator
             GameSimulator simulator = new GameSimulator();
 
             ExactWinningPosition exactWinningPosition = new ExactWinningPosition(); 
+
+            TwoPlayerSimulator twoPlayer = new TwoPlayerSimulator();
+
             Console.WriteLine("");
             //simulator.GameLogic();
-            exactWinningPosition.GameLogic();
+            //exactWinningPosition.GameLogic();
+            twoPlayer.GameLogic();
             Console.ReadKey();
         }
     }

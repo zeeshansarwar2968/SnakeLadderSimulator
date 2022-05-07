@@ -6,37 +6,16 @@ using System.Threading.Tasks;
 
 namespace SnakeLadderSimulator
 {
-    internal class GameSimulator
+    public class GameSimulator
     {
         //Initialising a variable to hold the value of position of player on the board
-        int position = 0;
+        public int position = 0;
 
-        string optionValue="";
+        public string optionValue="";
         //Initialising Random to for future application
         Random generateNum = new Random();
         
         
-        
-        public void OptionCheck()
-        {
-            // Using random method to generate a random number between 1 and 3
-            int options = generateNum.Next(1, 4);
-            switch (options)
-            {
-                case 1:
-                    optionValue = "No Play";
-                    break;
-                case 2:
-                    optionValue = "Ladder";
-                    break;
-                case 3:
-                    optionValue= "Snake";
-                    break;
-                default:
-                    break;
-            }
-
-        }
 
         // Function to create the logic of the game
         public void GameLogic()
@@ -87,19 +66,15 @@ namespace SnakeLadderSimulator
 
                 }else if(position < 0)
                 {
-                    //Console.WriteLine("Not Valid, revert position to 0");
                     position = 0;
                     continue;
                 }
-                Console.Write("The running Position is : ");
-                Console.WriteLine(position);
+                Console.WriteLine("The running Position is : {0} "+position);
                 Console.WriteLine("");
 
 
             }
 
-            Console.WriteLine("");
-            //Console.WriteLine("Final position is {0}", position);
             Console.WriteLine("");
             Console.WriteLine("The player has reached the winning position");
             
